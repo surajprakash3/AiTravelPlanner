@@ -1,0 +1,274 @@
+@reference "../index.css";
+
+/* ===========================
+   Premium Dashboard UI
+=========================== */
+
+.dashboard-page {
+  @apply w-full max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-12;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.dashboard-header {
+  @apply flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12;
+}
+
+.dashboard-title {
+  @apply text-4xl sm:text-5xl font-black text-white mb-2 tracking-tight drop-shadow-md;
+}
+
+.dashboard-subtitle {
+  @apply text-slate-300 text-lg font-light;
+}
+
+.dashboard-new-trip-btn {
+  @apply relative inline-flex items-center gap-2 px-8 py-4 rounded-2xl text-lg font-bold text-white transition-all duration-300 border border-blue-400/20 overflow-hidden shrink-0;
+  background: linear-gradient(135deg, #2563eb, #4f46e5, #7c3aed);
+  box-shadow: 0 10px 25px rgba(59,130,246,.25);
+}
+
+.dashboard-new-trip-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(59,130,246,.4);
+}
+
+.dashboard-new-trip-btn:active {
+  transform: scale(0.98);
+}
+
+/* ===========================
+   Layout Grids
+=========================== */
+
+.dashboard-grid {
+  @apply grid lg:grid-cols-12 gap-8 lg:gap-12;
+}
+
+.dashboard-main {
+  @apply lg:col-span-8 xl:col-span-9 space-y-10;
+}
+
+.dashboard-sidebar {
+  @apply lg:col-span-4 xl:col-span-3 space-y-8;
+}
+
+/* ===========================
+   Stats Cards
+=========================== */
+
+.stats-grid {
+  @apply grid grid-cols-2 md:grid-cols-3 gap-6;
+}
+
+.stat-card,
+.stat-card-hidden {
+  @apply relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 overflow-hidden flex flex-col transition-all duration-300;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+.stat-card-hidden {
+  @apply hidden md:flex;
+}
+
+.stat-card:hover,
+.stat-card-hidden:hover {
+  @apply bg-white/10 border-white/20;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0,0,0,.3);
+}
+
+/* Glowing border for stats */
+.stat-card::before,
+.stat-card-hidden::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255,255,255,.1), rgba(255,255,255,0), rgba(59,130,246,.15));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.stat-card-header {
+  @apply flex items-center gap-3 mb-4 relative z-10;
+}
+
+.stat-icon-blue {
+  @apply p-3 bg-gradient-to-br from-blue-500/20 to-blue-600/10 text-blue-400 rounded-2xl border border-blue-500/20;
+}
+
+.stat-icon-green {
+  @apply p-3 bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 text-emerald-400 rounded-2xl border border-emerald-500/20;
+}
+
+.stat-icon-purple {
+  @apply p-3 bg-gradient-to-br from-purple-500/20 to-purple-600/10 text-purple-400 rounded-2xl border border-purple-500/20;
+}
+
+.stat-icon {
+  @apply w-6 h-6;
+}
+
+.stat-label {
+  @apply text-slate-400 text-sm font-semibold tracking-wide uppercase;
+}
+
+.stat-value {
+  @apply text-5xl font-black text-white drop-shadow-md mt-auto relative z-10;
+}
+
+/* ===========================
+   Search Section
+=========================== */
+
+.search-header-row {
+  @apply flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/5 pb-4;
+}
+
+.search-section-title {
+  @apply text-2xl font-black text-white flex items-center gap-2;
+}
+
+.search-input-wrapper {
+  @apply relative max-w-md w-full;
+}
+
+.search-icon {
+  @apply absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400;
+}
+
+.search-input {
+  @apply w-full pl-12 pr-5 py-4 rounded-2xl border border-white/10 bg-white/5 text-white placeholder:text-slate-500 transition-all duration-300 text-base;
+}
+
+.search-input:hover {
+  @apply border-white/20 bg-white/10;
+}
+
+.search-input:focus {
+  @apply outline-none border-blue-500 ring-4 ring-blue-500/20 bg-white/10;
+}
+
+/* ===========================
+   Trips Grid
+=========================== */
+
+.trips-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-x-6 gap-y-10;
+}
+
+/* Empty State */
+.empty-state-card {
+  @apply text-center py-24 rounded-3xl border-2 border-white/5 border-dashed bg-white/5 backdrop-blur-xl transition-all duration-300 hover:border-blue-500/30 hover:bg-white/10;
+}
+
+.empty-state-icon {
+  @apply text-7xl mb-6 opacity-90 animate-float drop-shadow-2xl;
+}
+
+.empty-state-title {
+  @apply text-2xl font-black text-white mb-3;
+}
+
+.empty-state-desc {
+  @apply text-slate-400 text-lg mb-8 max-w-lg mx-auto;
+}
+
+.empty-state-btn {
+  @apply inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-bold transition-all duration-300 hover:shadow-xl hover:shadow-blue-600/40 hover:-translate-y-1;
+}
+
+/* ===========================
+   Sidebar: AI Suggestions
+=========================== */
+
+.ai-suggestions-card {
+  @apply relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl p-6 sm:p-8 overflow-hidden transition-all duration-300 hover:border-white/20 hover:shadow-2xl;
+}
+
+.ai-suggestions-glow {
+  @apply absolute top-0 right-0 w-40 h-40 bg-blue-500/20 rounded-full blur-[50px] -translate-y-1/2 translate-x-1/3 transition-colors duration-500;
+}
+
+.ai-suggestions-card:hover .ai-suggestions-glow {
+  @apply bg-purple-500/20;
+}
+
+.ai-suggestions-header {
+  @apply flex items-center gap-3 mb-8 relative z-10;
+}
+
+.ai-suggestions-header-icon {
+  @apply w-6 h-6 text-blue-400;
+}
+
+.ai-suggestions-title {
+  @apply text-xl font-black text-white tracking-tight;
+}
+
+.ai-suggestions-list {
+  @apply space-y-4 relative z-10;
+}
+
+.suggestion-item {
+  @apply flex gap-4 items-center p-3 rounded-2xl hover:bg-white/10 border border-transparent hover:border-white/10 transition-all duration-300 cursor-pointer;
+}
+
+.suggestion-item:hover {
+  transform: translateX(4px);
+}
+
+.suggestion-img {
+  @apply w-14 h-14 rounded-xl object-cover shadow-md;
+}
+
+.suggestion-info {
+  @apply flex-1 min-w-0;
+}
+
+.suggestion-name {
+  @apply text-white font-bold text-base truncate mb-0.5;
+}
+
+.suggestion-desc {
+  @apply text-slate-400 text-sm truncate;
+}
+
+.suggestion-arrow {
+  @apply w-5 h-5 text-slate-600 transition-colors duration-300;
+}
+
+.suggestion-item:hover .suggestion-arrow {
+  @apply text-blue-400 transform translate-x-1;
+}
+
+/* ===========================
+   Sidebar: Pro Banner
+=========================== */
+
+.pro-banner {
+  @apply relative rounded-3xl p-8 border border-white/10 text-center overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-purple-500/30;
+  background: linear-gradient(135deg, rgba(30,27,75,0.8), rgba(2,6,23,0.9));
+}
+
+.pro-banner-icon {
+  @apply w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-blue-500 to-purple-500 flex items-center justify-center mb-5 shadow-[0_0_30px_rgba(168,85,247,0.4)];
+}
+
+.pro-banner-title {
+  @apply text-2xl font-black text-white mb-2 tracking-tight;
+}
+
+.pro-banner-desc {
+  @apply text-slate-300 text-sm mb-6 leading-relaxed;
+}
+
+.pro-banner-btn {
+  @apply w-full py-4 rounded-2xl bg-white/10 hover:bg-white/20 text-white text-base font-bold transition-all duration-300 backdrop-blur-sm border border-white/10;
+}

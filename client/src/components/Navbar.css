@@ -1,0 +1,135 @@
+@reference "../index.css";
+
+/* Custom styles for Navbar component */
+
+.navbar {
+  @apply sticky top-0 z-50 glass-strong border-b border-white/5 backdrop-blur-2xl;
+}
+
+.navbar-inner {
+  @apply w-full max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16;
+}
+
+.navbar-row {
+  @apply flex items-center justify-between h-16 sm:h-20;
+}
+
+.navbar-logo {
+  @apply flex items-center gap-2.5;
+}
+
+.navbar-logo-icon {
+  @apply w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shadow-lg shadow-primary-500/20 group-hover:scale-105 transition-transform;
+}
+
+.navbar-logo-plane {
+  @apply w-6 h-6 text-white;
+}
+
+.navbar-logo-text {
+  @apply text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-surface-200 group-hover:opacity-80 transition-opacity tracking-tight;
+}
+
+.navbar-desktop {
+  @apply hidden md:flex items-center gap-8;
+}
+
+.navbar-nav-link {
+  @apply flex items-center gap-2 font-semibold transition-all;
+}
+
+.navbar-nav-link-active {
+  @apply text-primary-400;
+}
+
+.navbar-nav-link-inactive {
+  @apply text-surface-200 hover:text-white;
+}
+
+.navbar-nav-link-icon {
+  @apply w-4 h-4;
+}
+
+.navbar-cta-btn {
+  @apply flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-500 hover:to-primary-600 text-white font-bold transition-all hover:shadow-lg hover:shadow-primary-600/30 hover:-translate-y-0.5 border border-primary-500/30;
+}
+
+.navbar-cta-icon {
+  @apply w-5 h-5;
+}
+
+.navbar-user-section {
+  @apply flex items-center gap-4 ml-4 pl-4 border-l border-white/10;
+}
+
+.navbar-user-info {
+  @apply flex items-center gap-2.5 text-surface-200;
+}
+
+.navbar-avatar {
+  @apply w-9 h-9 rounded-full bg-surface-800 border border-white/10 flex items-center justify-center text-sm font-bold text-primary-400 shadow-inner;
+}
+
+.navbar-username {
+  @apply text-sm font-medium hidden lg:block;
+}
+
+.navbar-logout-btn {
+  @apply p-2 text-surface-400 hover:text-rose-400 hover:bg-rose-500/10 rounded-lg transition-colors;
+}
+
+.navbar-logout-icon {
+  @apply w-5 h-5;
+}
+
+.navbar-auth-login {
+  @apply text-surface-100 hover:text-primary-300 transition-colors font-medium;
+}
+
+.navbar-auth-register {
+  @apply px-4 py-2 rounded-lg bg-primary-600 hover:bg-primary-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-primary-600/30;
+}
+
+.navbar-mobile-toggle {
+  @apply md:hidden p-2 text-surface-200 hover:text-white rounded-lg hover:bg-white/5 transition-colors;
+}
+
+.navbar-mobile-toggle-icon {
+  @apply w-6 h-6;
+}
+
+.navbar-mobile-menu {
+  @apply md:hidden overflow-hidden;
+}
+
+.navbar-mobile-links {
+  @apply flex flex-col gap-2 py-4 border-t border-white/5;
+}
+
+.navbar-mobile-link {
+  @apply flex items-center gap-3 px-4 py-3 rounded-xl font-medium;
+}
+
+.navbar-mobile-link-active {
+  @apply bg-primary-500/10 text-primary-400;
+}
+
+.navbar-mobile-link-inactive {
+  @apply text-surface-200 hover:bg-white/5;
+}
+
+.navbar-mobile-link-icon {
+  @apply w-5 h-5;
+}
+
+.navbar-mobile-logout-btn {
+  @apply flex items-center gap-3 px-4 py-3 rounded-xl text-surface-400 hover:text-rose-400 hover:bg-rose-500/10 font-medium text-left;
+}
+
+.navbar-mobile-auth-login {
+  @apply px-4 py-3 text-surface-200 hover:bg-white/5 rounded-xl font-medium;
+}
+
+.navbar-mobile-auth-register {
+  @apply px-4 py-3 bg-primary-600/20 text-primary-400 hover:bg-primary-600/30 rounded-xl font-medium text-center border border-primary-500/20 mt-2;
+}

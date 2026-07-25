@@ -1,0 +1,99 @@
+@reference "../index.css";
+
+/* Custom styles for Footer component */
+
+.footer {
+  @apply border-t border-white/5 bg-surface-950 mt-auto pt-16 pb-8;
+}
+
+.footer-inner {
+  @apply w-full max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16;
+}
+
+.footer-grid {
+  @apply grid grid-cols-1 md:grid-cols-4 gap-12 mb-12;
+}
+
+.footer-brand {
+  @apply col-span-1 md:col-span-1;
+}
+
+.footer-logo {
+  @apply flex items-center gap-2 mb-6 inline-flex;
+}
+
+.footer-logo-icon {
+  @apply w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shadow-lg shadow-primary-500/20 group-hover:scale-105 transition-transform;
+}
+
+.footer-logo-plane {
+  @apply w-6 h-6 text-white;
+}
+
+.footer-logo-text {
+  @apply text-2xl font-black text-white tracking-tight;
+}
+
+.footer-brand-desc {
+  @apply text-surface-400 text-sm leading-relaxed mb-6;
+}
+
+.footer-socials {
+  @apply flex items-center gap-4;
+}
+
+.footer-social-btn {
+  @apply w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-surface-400 hover:text-primary-400 hover:bg-primary-500/10 transition-colors;
+}
+
+.footer-social-icon {
+  @apply w-5 h-5;
+}
+
+.footer-col-title {
+  @apply text-white font-bold mb-6 uppercase tracking-wider text-sm;
+}
+
+.footer-col-list {
+  @apply space-y-4;
+}
+
+.footer-col-link {
+  @apply text-surface-400 hover:text-primary-400 transition-colors text-sm;
+}
+
+.footer-newsletter-desc {
+  @apply text-surface-400 text-sm mb-4;
+}
+
+.footer-newsletter-form {
+  @apply flex gap-2;
+}
+
+.footer-newsletter-input {
+  @apply w-full px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-surface-500 focus:outline-none focus:border-primary-500 text-sm;
+}
+
+.footer-newsletter-btn {
+  @apply px-4 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white transition-colors;
+}
+
+.footer-newsletter-btn-icon {
+  @apply w-4 h-4;
+}
+
+.footer-bottom {
+  @apply pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4;
+}
+
+.footer-copyright {
+  @apply text-surface-500 text-sm;
+}
+
+.footer-powered {
+  @apply text-surface-500 text-sm flex items-center gap-1;
+}
+
+.footer-powered-name {
+  @apply text-surface-300 font-medium;
+}

@@ -1,0 +1,458 @@
+@reference "../index.css";
+
+/* Custom styles for ItineraryView component */
+
+.itinerary-wrapper {
+  @apply space-y-8 animate-fade-in;
+}
+
+.itinerary-empty {
+  @apply glass-strong rounded-3xl p-12 text-center shadow-2xl;
+}
+
+.itinerary-empty-icon {
+  @apply text-5xl mb-4;
+}
+
+.itinerary-empty-title {
+  @apply text-xl font-bold text-white mb-2;
+}
+
+.itinerary-empty-desc {
+  @apply text-surface-400;
+}
+
+/* Tab Navigation */
+.tab-scroll-wrapper {
+  @apply flex overflow-x-auto pb-2 scrollbar-hide;
+}
+
+.tab-group {
+  @apply flex gap-2 p-1.5 glass rounded-2xl w-max;
+}
+
+.tab-btn-active {
+  @apply flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 whitespace-nowrap bg-primary-600 text-white shadow-lg shadow-primary-600/25 scale-100;
+}
+
+.tab-btn-inactive {
+  @apply flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 whitespace-nowrap text-surface-400 hover:text-white hover:bg-white/10 scale-95 hover:scale-100;
+}
+
+.tab-icon {
+  @apply text-base;
+}
+
+.tab-content-area {
+  @apply min-h-[500px];
+}
+
+/* Day Schedule */
+.schedule-container {
+  @apply space-y-12 pl-2 sm:pl-6;
+}
+
+.day-wrapper {
+  @apply relative;
+}
+
+.day-header {
+  @apply flex items-center gap-6 mb-8 relative z-10;
+}
+
+.day-number-badge {
+  @apply flex flex-col items-center justify-center shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 text-white shadow-xl shadow-primary-600/30;
+}
+
+.day-label {
+  @apply text-xs font-medium uppercase tracking-wider opacity-80;
+}
+
+.day-number {
+  @apply text-2xl font-bold;
+}
+
+.day-theme {
+  @apply text-2xl font-bold text-white tracking-tight;
+}
+
+.day-timeline-line {
+  @apply absolute left-8 top-16 bottom-0 w-0.5 bg-gradient-to-b from-primary-500/50 to-transparent -translate-x-1/2 z-0 hidden sm:block;
+}
+
+.day-events {
+  @apply space-y-6 sm:pl-16 relative z-10;
+}
+
+.event-wrapper {
+  @apply relative;
+}
+
+.event-card {
+  @apply glass rounded-3xl p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-white/[0.06];
+}
+
+.event-card-border-amber {
+  @apply border-l-4 border-amber-400/20;
+}
+
+.event-card-border-blue {
+  @apply border-l-4 border-blue-400/20;
+}
+
+.event-card-border-purple {
+  @apply border-l-4 border-purple-400/20;
+}
+
+.event-header {
+  @apply flex flex-wrap items-center gap-3 mb-4;
+}
+
+.event-period-badge {
+  @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider;
+}
+
+.event-time-badge {
+  @apply text-sm font-medium text-surface-400 bg-surface-800/50 px-3 py-1 rounded-lg;
+}
+
+.event-title {
+  @apply text-xl font-bold text-white mb-3 leading-snug;
+}
+
+.event-desc {
+  @apply text-surface-300 text-base leading-relaxed mb-5;
+}
+
+.event-location {
+  @apply inline-flex items-center gap-2 text-surface-400 text-sm font-medium bg-white/5 px-4 py-2 rounded-xl;
+}
+
+/* Cards Grid (attractions, hotels, restaurants) */
+.cards-grid {
+  @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8;
+}
+
+.attraction-card {
+  @apply glass rounded-3xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-500/20 flex flex-col h-full border border-white/5 hover:border-primary-500/30;
+}
+
+.attraction-card-title {
+  @apply text-xl font-bold text-white mb-2 group-hover:text-primary-300 transition-colors;
+}
+
+.attraction-card-desc {
+  @apply text-surface-300 text-sm leading-relaxed flex-grow mb-6;
+}
+
+.attraction-card-footer {
+  @apply flex flex-wrap items-center gap-3 mt-auto pt-4 border-t border-white/5;
+}
+
+.attraction-duration-badge {
+  @apply inline-flex items-center gap-1.5 text-xs font-medium text-surface-300 bg-white/5 px-3 py-1.5 rounded-lg;
+}
+
+.attraction-fee-badge {
+  @apply inline-flex items-center gap-1.5 text-xs font-medium text-emerald-400 bg-emerald-400/10 px-3 py-1.5 rounded-lg;
+}
+
+.hotel-card {
+  @apply glass rounded-3xl p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col h-full bg-surface-900/50 hover:bg-surface-800/80;
+}
+
+.hotel-card-header {
+  @apply flex justify-between items-start gap-4 mb-4;
+}
+
+.hotel-card-name {
+  @apply text-xl font-bold text-white;
+}
+
+.hotel-card-price {
+  @apply text-lg font-bold text-primary-400 whitespace-nowrap;
+}
+
+.hotel-card-category-wrapper {
+  @apply mb-4;
+}
+
+.hotel-card-category-badge {
+  @apply inline-flex px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-lg;
+}
+
+.hotel-card-desc {
+  @apply text-surface-300 text-sm leading-relaxed flex-grow mb-6;
+}
+
+.hotel-card-location {
+  @apply mt-auto pt-4 border-t border-white/5 text-surface-400 text-sm font-medium flex items-center gap-2;
+}
+
+.restaurant-card {
+  @apply glass rounded-3xl p-8 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-500/20 transition-all duration-300 flex flex-col h-full border border-white/5 hover:border-primary-500/30;
+}
+
+.restaurant-card-name {
+  @apply text-xl font-bold text-white mb-4;
+}
+
+.restaurant-card-badges {
+  @apply flex flex-wrap gap-2 mb-4;
+}
+
+.restaurant-cuisine-badge {
+  @apply text-xs font-bold text-orange-400 bg-orange-400/10 px-3 py-1.5 rounded-lg uppercase tracking-wide;
+}
+
+.restaurant-price-badge {
+  @apply text-xs font-bold text-emerald-400 bg-emerald-400/10 px-3 py-1.5 rounded-lg;
+}
+
+.restaurant-card-desc {
+  @apply text-surface-300 text-sm leading-relaxed flex-grow mb-6;
+}
+
+.restaurant-must-try {
+  @apply mt-auto pt-4 border-t border-white/5 bg-primary-900/10 -mx-6 -mb-6 px-6 py-4 rounded-b-3xl;
+}
+
+.restaurant-must-try-text {
+  @apply text-primary-300 text-sm font-medium flex items-center gap-2;
+}
+
+/* Budget Section */
+.budget-section-outer {
+  @apply max-w-3xl mx-auto;
+}
+
+.budget-section-card {
+  @apply glass-strong rounded-3xl p-8 sm:p-10 relative overflow-hidden;
+}
+
+.budget-section-glow {
+  @apply absolute -top-24 -right-24 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl;
+}
+
+.budget-section-total {
+  @apply text-center mb-12 relative z-10;
+}
+
+.budget-section-total-label {
+  @apply text-surface-400 text-sm font-medium uppercase tracking-widest mb-3;
+}
+
+.budget-section-total-value {
+  @apply text-5xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500 tracking-tight;
+}
+
+.budget-section-items {
+  @apply space-y-6 relative z-10;
+}
+
+.budget-item {
+  @apply flex items-center gap-4 sm:gap-6 p-4 rounded-2xl hover:bg-white/5 transition-colors;
+}
+
+.budget-item-icon {
+  @apply flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 shadow-inner text-xl shrink-0 group-hover:scale-110 transition-transform;
+}
+
+.budget-item-info {
+  @apply flex-1 min-w-0;
+}
+
+.budget-item-label-row {
+  @apply flex justify-between items-end mb-2;
+}
+
+.budget-item-label {
+  @apply text-base font-semibold text-surface-200;
+}
+
+.budget-item-value {
+  @apply text-lg font-bold text-white;
+}
+
+.budget-item-bar-track {
+  @apply w-full h-2.5 rounded-full bg-surface-900 overflow-hidden shadow-inner;
+}
+
+.budget-item-bar {
+  @apply h-full rounded-full opacity-80;
+}
+
+/* Packing Checklist */
+.packing-card {
+  @apply max-w-4xl mx-auto glass rounded-3xl p-6 sm:p-10;
+}
+
+.packing-header {
+  @apply flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8;
+}
+
+.packing-title-group {
+  /* wrapper for title+subtitle */
+}
+
+.packing-title {
+  @apply text-2xl font-bold text-white mb-2;
+}
+
+.packing-subtitle {
+  @apply text-surface-400 text-sm;
+}
+
+.packing-progress-wrapper {
+  @apply flex items-center gap-4 shrink-0 bg-white/5 px-4 py-3 rounded-2xl;
+}
+
+.packing-progress-circle {
+  @apply w-12 h-12 rounded-full border-4 border-surface-700 flex items-center justify-center relative;
+}
+
+.packing-progress-svg {
+  @apply absolute inset-0 w-full h-full -rotate-90;
+}
+
+.packing-progress-percent {
+  @apply text-xs font-bold text-white relative z-10;
+}
+
+.packing-progress-count {
+  @apply text-white font-bold;
+}
+
+.packing-progress-label {
+  @apply text-surface-400 text-xs;
+}
+
+.packing-grid {
+  @apply grid sm:grid-cols-2 gap-3 sm:gap-4;
+}
+
+.packing-item-checked {
+  @apply flex items-start gap-4 p-4 sm:p-5 rounded-2xl cursor-pointer transition-all duration-300 border bg-emerald-500/10 border-emerald-500/20 shadow-inner;
+}
+
+.packing-item-unchecked {
+  @apply flex items-start gap-4 p-4 sm:p-5 rounded-2xl cursor-pointer transition-all duration-300 border border-transparent bg-white/5 hover:bg-white/10 hover:border-white/10;
+}
+
+.packing-checkbox-checked {
+  @apply mt-0.5 w-6 h-6 rounded-lg flex flex-shrink-0 items-center justify-center border-2 transition-colors bg-emerald-500 border-emerald-500;
+}
+
+.packing-checkbox-unchecked {
+  @apply mt-0.5 w-6 h-6 rounded-lg flex flex-shrink-0 items-center justify-center border-2 transition-colors bg-surface-800 border-surface-600;
+}
+
+.packing-check-svg {
+  @apply w-4 h-4 text-white;
+}
+
+.packing-item-text-checked {
+  @apply text-base font-medium transition-colors text-surface-500 line-through;
+}
+
+.packing-item-text-unchecked {
+  @apply text-base font-medium transition-colors text-surface-200;
+}
+
+/* Travel Info */
+.travel-info-grid {
+  @apply grid gap-6 lg:grid-cols-2;
+}
+
+.weather-card {
+  @apply glass rounded-3xl p-8 hover:shadow-xl transition-shadow lg:col-span-2 relative overflow-hidden;
+}
+
+.weather-bg-icon {
+  @apply absolute top-0 right-0 p-8 opacity-10 text-8xl;
+}
+
+.weather-title {
+  @apply text-2xl font-bold text-white mb-4 relative z-10;
+}
+
+.weather-desc {
+  @apply text-surface-300 text-lg leading-relaxed relative z-10 max-w-3xl;
+}
+
+.safety-card {
+  @apply glass rounded-3xl p-8 hover:shadow-xl transition-shadow;
+}
+
+.safety-title {
+  @apply text-2xl font-bold text-white mb-6 flex items-center gap-3;
+}
+
+.safety-title-icon {
+  @apply text-rose-400;
+}
+
+.safety-list {
+  @apply space-y-4;
+}
+
+.safety-list-item {
+  @apply flex items-start gap-4 p-4 bg-white/5 rounded-2xl;
+}
+
+.safety-number {
+  @apply flex items-center justify-center w-8 h-8 rounded-full bg-rose-500/20 text-rose-400 font-bold text-sm shrink-0;
+}
+
+.safety-text {
+  @apply text-surface-300 leading-relaxed pt-1;
+}
+
+.transport-card {
+  @apply glass rounded-3xl p-8 hover:shadow-xl transition-shadow;
+}
+
+.transport-title {
+  @apply text-2xl font-bold text-white mb-6 flex items-center gap-3;
+}
+
+.transport-title-icon {
+  @apply text-blue-400;
+}
+
+.transport-overview {
+  @apply text-surface-300 mb-6 leading-relaxed bg-white/5 p-4 rounded-2xl;
+}
+
+.transport-options-list {
+  @apply space-y-3;
+}
+
+.transport-option-item {
+  @apply flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-surface-800/40 border border-white/5 p-4 rounded-2xl;
+}
+
+.transport-option-name {
+  @apply font-bold text-white text-base mb-1;
+}
+
+.transport-option-desc {
+  @apply text-surface-400 text-sm leading-relaxed;
+}
+
+.transport-option-cost {
+  @apply shrink-0 bg-blue-500/10 text-blue-400 font-bold text-sm px-4 py-2 rounded-xl whitespace-nowrap;
+}
+
+/* Empty State */
+.empty-state {
+  @apply glass-strong rounded-3xl p-12 text-center max-w-2xl mx-auto my-12 border-dashed border-2 border-surface-700/50;
+}
+
+.empty-state-icon {
+  @apply text-6xl mb-6 opacity-80 animate-float;
+}
+
+.empty-state-text {
+  @apply text-surface-300 text-lg font-medium;
+}

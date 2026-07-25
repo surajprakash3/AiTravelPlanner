@@ -1,0 +1,67 @@
+@reference "../index.css";
+
+/* Custom styles for EditTrip page */
+
+.edit-page {
+  @apply max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10;
+}
+
+.edit-loading {
+  @apply min-h-[60vh] flex items-center justify-center;
+}
+
+.edit-regenerating {
+  @apply min-h-[80vh] flex flex-col items-center justify-center px-4;
+}
+
+.edit-regenerating-card {
+  @apply glass-strong rounded-3xl p-12 text-center max-w-md w-full animate-pulse-glow;
+}
+
+.edit-regenerating-icon {
+  @apply text-6xl mb-6 animate-float;
+}
+
+.edit-regenerating-title {
+  @apply text-2xl font-bold text-white mb-3;
+}
+
+.edit-regenerating-desc {
+  @apply text-surface-400 mb-6;
+}
+
+.edit-back-link {
+  @apply inline-flex items-center gap-1 text-surface-400 hover:text-primary-400 text-sm font-medium transition-colors mb-6;
+}
+
+.edit-page-header {
+  @apply mb-10 animate-fade-in relative z-10;
+}
+
+.edit-page-title {
+  @apply text-4xl sm:text-5xl font-black text-white mb-3 tracking-tight;
+}
+
+.edit-page-subtitle {
+  @apply text-surface-300 text-lg;
+}
+
+.edit-error-msg {
+  @apply mb-6 p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 text-sm text-center animate-fade-in;
+}
+
+.edit-form {
+  @apply space-y-8 animate-slide-up;
+}
+
+.edit-actions-row {
+  @apply flex flex-col sm:flex-row gap-4 mt-6;
+}
+
+.edit-save-btn {
+  @apply flex-1 py-4 rounded-2xl glass-strong text-white font-bold transition-all hover:bg-white/10 hover:-translate-y-1 disabled:opacity-50;
+}
+
+.edit-regenerate-btn {
+  @apply flex-1 py-4 rounded-2xl bg-gradient-to-r from-primary-600 to-primary-800 hover:from-primary-500 hover:to-primary-700 text-white font-bold transition-all hover:shadow-2xl hover:shadow-primary-600/40 hover:-translate-y-1 disabled:opacity-50 border border-primary-500/30;
+}

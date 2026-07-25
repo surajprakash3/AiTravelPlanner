@@ -1,0 +1,43 @@
+@reference "../index.css";
+
+/* Custom styles for BudgetBreakdown component */
+
+.budget-breakdown {
+  @apply space-y-3;
+}
+
+.budget-breakdown-header {
+  @apply flex items-center justify-between;
+}
+
+.budget-breakdown-total-label {
+  @apply text-sm font-medium text-surface-300;
+}
+
+.budget-breakdown-total-value {
+  @apply font-bold text-white;
+}
+
+.budget-breakdown-bar {
+  @apply flex h-3 rounded-full overflow-hidden;
+}
+
+.budget-breakdown-bar-segment {
+  @apply opacity-80;
+}
+
+.budget-breakdown-legend {
+  @apply flex flex-wrap gap-x-4 gap-y-1;
+}
+
+.budget-breakdown-legend-item {
+  @apply flex items-center gap-1.5;
+}
+
+.budget-breakdown-legend-dot {
+  @apply w-2.5 h-2.5 rounded-full opacity-80;
+}
+
+.budget-breakdown-legend-text {
+  @apply text-xs text-surface-400;
+}

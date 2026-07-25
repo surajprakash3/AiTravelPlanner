@@ -1,0 +1,391 @@
+@reference "../index.css";
+
+/* ===========================
+   Premium Authentication UI
+=========================== */
+
+.auth-page {
+  @apply relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-10;
+}
+
+.auth-bg-wrapper {
+  @apply absolute inset-0 bg-cover bg-center bg-no-repeat scale-105;
+}
+
+.auth-bg-overlay {
+  @apply absolute inset-0
+         bg-gradient-to-br
+         from-slate-950/95
+         via-slate-950/80
+         to-black;
+}
+
+.auth-motion-wrapper {
+  @apply relative z-10 w-full max-w-md;
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.auth-card {
+  @apply relative rounded-3xl
+         border border-white/10
+         bg-white/10
+         backdrop-blur-2xl
+         p-8 sm:p-10
+         overflow-hidden;
+
+  box-shadow:
+      0 10px 30px rgba(0,0,0,.35),
+      0 20px 80px rgba(0,0,0,.45);
+
+  transition: .35s ease;
+}
+
+.auth-card:hover{
+    transform:translateY(-4px);
+    box-shadow:
+      0 15px 40px rgba(0,0,0,.45),
+      0 30px 100px rgba(0,0,0,.55);
+}
+
+/* glowing border */
+
+.auth-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    padding:1px;
+    border-radius:24px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.15),
+        rgba(255,255,255,0),
+        rgba(59,130,246,.25)
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+            mask-composite:exclude;
+
+    pointer-events:none;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.auth-card-header{
+    @apply text-center mb-8;
+}
+
+.auth-logo-icon{
+    @apply w-20 h-20 mx-auto rounded-3xl
+           flex items-center justify-center
+           bg-gradient-to-br
+           from-blue-500
+           via-indigo-500
+           to-purple-600
+           shadow-2xl
+           mb-6;
+
+    animation:float 4s ease-in-out infinite;
+}
+
+.auth-logo-plane{
+    @apply w-10 h-10 text-white;
+}
+
+.auth-card-title{
+    @apply text-4xl font-black text-white tracking-tight;
+}
+
+.auth-card-subtitle{
+    @apply mt-2 text-slate-300 text-base;
+}
+
+/* ===========================
+   Error
+=========================== */
+
+.auth-error-msg{
+    @apply mt-5 mb-5
+           rounded-xl
+           border border-red-500/30
+           bg-red-500/10
+           px-4 py-3
+           text-red-300
+           text-sm;
+}
+
+/* ===========================
+   Form
+=========================== */
+
+.auth-form{
+    @apply space-y-5;
+}
+
+.auth-label{
+    @apply mb-2 block
+           text-sm
+           font-semibold
+           text-slate-300;
+}
+
+/* ===========================
+   Inputs
+=========================== */
+
+.auth-input{
+
+    @apply w-full
+           rounded-2xl
+           border border-white/10
+           bg-white/5
+           px-5
+           py-3.5
+           text-white
+           placeholder:text-slate-500
+           transition-all
+           duration-300;
+
+}
+
+.auth-input:hover{
+
+    @apply border-white/30;
+
+}
+
+.auth-input:focus{
+
+    @apply outline-none
+           border-blue-500
+           ring-4
+           ring-blue-500/20;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/* Chrome Autofill */
+
+.auth-input:-webkit-autofill,
+.auth-input:-webkit-autofill:hover,
+.auth-input:-webkit-autofill:focus{
+
+    -webkit-text-fill-color:white;
+    transition:background-color 9999s;
+
+}
+
+/* ===========================
+   Login Button
+=========================== */
+
+.auth-submit-btn{
+
+    @apply w-full
+           rounded-2xl
+           py-4
+           text-lg
+           font-bold
+           text-white
+           transition-all
+           duration-300
+           border border-blue-400/20;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5,
+        #7c3aed
+    );
+
+}
+
+.auth-submit-btn:hover{
+
+    transform:translateY(-3px) scale(1.02);
+
+    box-shadow:
+    0 10px 25px rgba(59,130,246,.35),
+    0 20px 45px rgba(79,70,229,.30);
+
+}
+
+.auth-submit-btn:active{
+
+    transform:scale(.98);
+
+}
+
+.auth-submit-btn:disabled{
+
+    @apply opacity-50 cursor-not-allowed;
+
+}
+
+/* ===========================
+   Loading
+=========================== */
+
+.auth-loading-span{
+    @apply flex items-center justify-center gap-3;
+}
+
+.auth-loading-svg{
+    @apply w-5 h-5 animate-spin;
+}
+
+/* ===========================
+   Divider
+=========================== */
+
+.auth-divider{
+
+    @apply flex items-center gap-4 my-7;
+
+}
+
+.auth-divider-line{
+
+    height:1px;
+    flex:1;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent
+    );
+
+}
+
+.auth-divider-text{
+
+    @apply text-xs uppercase tracking-widest text-slate-400;
+
+}
+
+/* ===========================
+   Social Login
+=========================== */
+
+.auth-social-grid{
+
+    @apply grid grid-cols-2 gap-4;
+
+}
+
+.auth-social-btn{
+
+    @apply flex
+           items-center
+           justify-center
+           gap-2
+           rounded-2xl
+           border
+           border-white/10
+           bg-white/5
+           py-3
+           text-white
+           transition-all
+           duration-300;
+
+}
+
+.auth-social-btn:hover{
+
+    @apply border-blue-500/40;
+
+    background:rgba(59,130,246,.12);
+
+    transform:translateY(-2px);
+
+}
+
+.auth-social-icon{
+
+    @apply w-5 h-5;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+.auth-footer-text{
+
+    @apply mt-8
+           text-center
+           text-sm
+           text-slate-400;
+
+}
+
+.auth-footer-link{
+
+    @apply font-semibold
+           text-blue-400
+           transition-colors;
+
+}
+
+.auth-footer-link:hover{
+
+    @apply text-blue-300;
+
+}
+
+/* ===========================
+   Floating Animation
+=========================== */
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:640px){
+
+.auth-card{
+
+    @apply p-6 rounded-2xl;
+
+}
+
+.auth-card-title{
+
+    @apply text-3xl;
+
+}
+
+.auth-logo-icon{
+
+    @apply w-16 h-16;
+
+}
+
+}

@@ -1,0 +1,127 @@
+@reference "../index.css";
+
+/* Custom styles for TripDetail page */
+
+.trip-detail-page {
+  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10;
+}
+
+.trip-detail-loading {
+  @apply min-h-[60vh] flex items-center justify-center;
+}
+
+.trip-detail-error {
+  @apply max-w-3xl mx-auto px-4 py-20 text-center;
+}
+
+.trip-detail-error-icon {
+  @apply text-6xl mb-4;
+}
+
+.trip-detail-error-title {
+  @apply text-xl font-bold text-white mb-2;
+}
+
+.trip-detail-error-desc {
+  @apply text-surface-400 mb-6;
+}
+
+.trip-detail-error-link {
+  @apply text-primary-400 hover:text-primary-300 font-medium;
+}
+
+.trip-detail-back-link {
+  @apply inline-flex items-center gap-1 text-surface-400 hover:text-primary-400 text-sm font-medium transition-colors mb-6;
+}
+
+.trip-header-card {
+  @apply glass rounded-3xl p-6 sm:p-8 mb-8 animate-fade-in;
+}
+
+.trip-header-row {
+  @apply flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8;
+}
+
+.trip-header-text {
+  @apply flex-1 min-w-0 pr-4;
+}
+
+.trip-title {
+  @apply text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3 tracking-tight break-words;
+}
+
+.trip-created-date {
+  @apply text-surface-300 text-base font-medium mb-4;
+}
+
+.trip-summary {
+  @apply text-surface-200 text-lg leading-relaxed max-w-4xl;
+}
+
+.trip-header-actions {
+  @apply flex items-center gap-3 shrink-0;
+}
+
+.trip-edit-btn {
+  @apply px-4 py-2 rounded-xl glass text-surface-200 hover:text-white font-medium text-sm transition-all hover:bg-white/[0.08];
+}
+
+.trip-delete-btn {
+  @apply px-4 py-2 rounded-xl bg-rose-500/10 text-rose-400 hover:bg-rose-500/20 font-medium text-sm transition-all;
+}
+
+.trip-meta-tags {
+  @apply flex flex-wrap gap-4 mt-6 pt-6 border-t border-white/10;
+}
+
+.trip-meta-tag {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-800/50 text-surface-200 text-sm font-medium border border-white/5 hover:border-white/20 transition-colors cursor-default;
+}
+
+.trip-meta-tag-emoji {
+  @apply text-lg;
+}
+
+.trip-itinerary-wrapper {
+  @apply animate-fade-in;
+}
+
+.delete-modal-overlay {
+  @apply fixed inset-0 z-50 flex items-center justify-center px-4;
+}
+
+.delete-modal-backdrop {
+  @apply absolute inset-0 bg-black/60 backdrop-blur-sm;
+}
+
+.delete-modal-card {
+  @apply relative glass-strong rounded-2xl p-6 sm:p-8 max-w-md w-full animate-fade-in;
+}
+
+.delete-modal-inner {
+  @apply text-center;
+}
+
+.delete-modal-icon {
+  @apply text-5xl mb-4;
+}
+
+.delete-modal-title {
+  @apply text-xl font-bold text-white mb-2;
+}
+
+.delete-modal-desc {
+  @apply text-surface-400 text-sm mb-6;
+}
+
+.delete-modal-actions {
+  @apply flex gap-3;
+}
+
+.delete-modal-cancel-btn {
+  @apply flex-1 py-2.5 rounded-xl glass text-surface-200 hover:text-white font-medium transition-all hover:bg-white/[0.08];
+}
+
+.delete-modal-confirm-btn {
+  @apply flex-1 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-medium transition-all disabled:opacity-50;
+}

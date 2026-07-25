@@ -1,0 +1,197 @@
+@reference "../index.css";
+
+/* ===========================
+   Premium Create Trip UI
+=========================== */
+
+.create-trip-page {
+  @apply relative min-h-screen flex items-center justify-center overflow-hidden py-16 px-4 sm:px-6;
+}
+
+.create-trip-bg-wrapper {
+  @apply absolute inset-0 bg-[url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000')] bg-cover bg-center bg-no-repeat scale-105;
+}
+
+.create-trip-bg-overlay {
+  @apply absolute inset-0 bg-gradient-to-br from-slate-950/95 via-slate-950/85 to-black;
+}
+
+.create-trip-container {
+  @apply relative z-10 w-full max-w-6xl mx-auto flex flex-col items-center;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.create-trip-header {
+  @apply text-center mb-10 w-full max-w-2xl;
+}
+
+.create-trip-title {
+  @apply text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4 tracking-tight drop-shadow-lg;
+}
+
+.create-trip-subtitle {
+  @apply text-slate-300 text-lg font-light;
+}
+
+/* ===========================
+   Card & Grid
+=========================== */
+
+.create-trip-card {
+  @apply relative w-full rounded-3xl border border-white/10 bg-white/10 backdrop-blur-2xl p-8 sm:p-12 overflow-hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,.4);
+  transition: .4s ease;
+}
+
+.create-trip-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255,255,255,.15), rgba(255,255,255,0), rgba(59,130,246,.25));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.create-trip-grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 w-full;
+}
+
+.create-trip-col {
+  @apply space-y-8 flex flex-col;
+}
+
+/* ===========================
+   Form Elements
+=========================== */
+
+.form-section {
+  @apply flex flex-col;
+}
+
+.form-label {
+  @apply mb-3 block text-sm font-semibold text-slate-200 tracking-wide uppercase;
+}
+
+.form-input {
+  @apply w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-slate-500 transition-all duration-300 text-lg;
+}
+
+.form-input:hover {
+  @apply border-white/30;
+}
+
+.form-input:focus {
+  @apply outline-none border-blue-500 ring-4 ring-blue-500/20 bg-white/10;
+}
+
+/* Range Slider */
+.range-container {
+  @apply flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl px-5 py-4;
+}
+
+.range-input {
+  @apply flex-1 h-2 rounded-full appearance-none bg-white/20 outline-none;
+}
+.range-input::-webkit-slider-thumb {
+  @apply appearance-none w-6 h-6 rounded-full bg-blue-500 cursor-pointer shadow-lg shadow-blue-500/50 hover:scale-110 transition-transform;
+}
+
+.range-value {
+  @apply text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 w-12 text-center;
+}
+
+.range-subtext {
+  @apply text-slate-400 text-sm mt-2 font-medium;
+}
+
+/* Options Grid */
+.options-grid-3 {
+  @apply grid grid-cols-3 gap-3;
+}
+
+.options-grid-2 {
+  @apply grid grid-cols-2 gap-3;
+}
+
+.option-btn {
+  @apply flex flex-col items-center justify-center py-4 px-2 rounded-2xl text-sm font-semibold transition-all duration-300 border border-transparent;
+}
+
+.option-btn-left {
+  @apply flex items-center py-4 px-5 rounded-2xl text-sm font-semibold transition-all duration-300 border border-transparent text-left;
+}
+
+.option-selected {
+  @apply bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-lg shadow-blue-500/30 border-blue-400/30 transform scale-[1.02];
+}
+
+.option-unselected {
+  @apply bg-white/5 text-slate-300 hover:bg-white/10 border-white/10 hover:border-white/20;
+}
+
+/* ===========================
+   Submit Button
+=========================== */
+
+.create-trip-submit-wrapper {
+  @apply mt-12 flex justify-center w-full;
+}
+
+.submit-btn {
+  @apply relative w-full max-w-md rounded-2xl py-5 text-xl font-black text-white transition-all duration-300 border border-blue-400/20 overflow-hidden;
+  background: linear-gradient(135deg, #2563eb, #4f46e5, #7c3aed);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(59,130,246,.35), 0 20px 45px rgba(79,70,229,.30);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+.submit-btn-glow {
+  @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite] pointer-events-none;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ===========================
+   Loading State
+=========================== */
+
+.create-trip-loading {
+  @apply min-h-screen flex items-center justify-center px-4 relative overflow-hidden;
+}
+
+.create-trip-loading-card {
+  @apply relative z-10 glass-strong rounded-3xl p-12 text-center max-w-lg w-full border border-blue-500/30 shadow-[0_0_50px_rgba(59,130,246,0.15)];
+}
+
+.create-trip-loading-icon {
+  @apply text-7xl mb-6 drop-shadow-[0_0_20px_rgba(59,130,246,0.5)];
+}
+
+.create-trip-loading-title {
+  @apply text-3xl font-black text-white mb-4;
+}
+
+.create-trip-loading-desc {
+  @apply text-slate-300 text-lg mb-8;
+}
+
+.create-trip-error {
+  @apply w-full max-w-2xl mb-8 p-4 rounded-2xl bg-red-500/10 border border-red-500/30 text-red-300 text-center font-medium;
+}

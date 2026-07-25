@@ -1,0 +1,75 @@
+@reference "../index.css";
+
+/* Custom styles for TripCard component */
+
+.trip-card-link {
+  @apply block glass rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary-900/40 border border-white/5 hover:border-primary-500/30 relative h-full flex flex-col;
+}
+
+.trip-card-image-wrapper {
+  @apply relative h-48 overflow-hidden;
+}
+
+.trip-card-image-skeleton {
+  @apply absolute inset-0 bg-surface-900 animate-pulse;
+}
+
+.trip-card-image {
+  @apply absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110;
+}
+
+.trip-card-image-gradient {
+  @apply absolute inset-0 bg-gradient-to-t from-surface-900 via-surface-900/20 to-transparent;
+}
+
+.trip-card-badges {
+  @apply absolute top-4 left-4 right-4 flex justify-between items-start;
+}
+
+.trip-card-destination {
+  @apply absolute bottom-4 left-4 right-4;
+}
+
+.trip-card-destination-title {
+  @apply text-2xl font-black text-white drop-shadow-lg line-clamp-1;
+}
+
+.trip-card-body {
+  @apply p-6 flex-1 flex flex-col bg-surface-900/50 backdrop-blur-sm;
+}
+
+.trip-card-description {
+  @apply text-surface-300 text-sm mb-6 line-clamp-2 flex-1;
+}
+
+.trip-card-meta {
+  @apply flex flex-wrap items-center gap-3 text-xs text-surface-200 mb-6;
+}
+
+.trip-card-meta-tag {
+  @apply flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-lg border border-white/5;
+}
+
+.trip-card-meta-icon-blue {
+  @apply w-3.5 h-3.5 text-primary-400;
+}
+
+.trip-card-meta-icon-green {
+  @apply w-3.5 h-3.5 text-emerald-400;
+}
+
+.trip-card-footer {
+  @apply pt-4 border-t border-white/10 flex items-center justify-between mt-auto;
+}
+
+.trip-card-date {
+  @apply text-xs text-surface-400 font-medium;
+}
+
+.trip-card-view-link {
+  @apply text-sm font-bold text-primary-400 flex items-center gap-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all;
+}
+
+.trip-card-arrow-icon {
+  @apply w-4 h-4;
+}
