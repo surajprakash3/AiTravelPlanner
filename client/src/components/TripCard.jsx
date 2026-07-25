@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Compass, ArrowRight, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -17,7 +18,7 @@ const IMAGES = [
   'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80',
 ];
 
-export default function TripCard({ trip }) {
+const TripCard = memo(function TripCard({ trip }) {
   const budgetClass = BUDGET_COLORS[trip.budget] || 'text-surface-300 bg-surface-700 border-surface-600';
   const createdDate = new Date(trip.createdAt).toLocaleDateString('en-US', {
     month: 'short',
@@ -88,4 +89,6 @@ export default function TripCard({ trip }) {
       </Link>
     </motion.div>
   );
-}
+});
+
+export default TripCard;

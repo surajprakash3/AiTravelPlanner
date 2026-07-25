@@ -1,6 +1,7 @@
 import 'dotenv/config'; // Must be first — loads .env before other modules
 import express from 'express';
 import cors from 'cors';
+import compression from 'compression';
 import connectDB from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
 import tripRoutes from './routes/tripRoutes.js';
@@ -14,6 +15,7 @@ const app = express();
 // ---------------------------------------------------------------------------
 // Middleware
 // ---------------------------------------------------------------------------
+app.use(compression()); // GZIP all responses
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 

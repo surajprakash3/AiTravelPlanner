@@ -59,7 +59,7 @@ export const getTrips = async (req, res, next) => {
       ];
     }
 
-    const trips = await Trip.find(filter).sort({ createdAt: -1 });
+    const trips = await Trip.find(filter).sort({ createdAt: -1 }).lean();
     res.json(trips);
   } catch (error) {
     next(error);
@@ -71,7 +71,7 @@ export const getTrips = async (req, res, next) => {
 // ---------------------------------------------------------------------------
 export const getTripById = async (req, res, next) => {
   try {
-    const trip = await Trip.findOne({ _id: req.params.id, user: req.user.id });
+    const trip = await Trip.findOne({ _id: req.params.id, user: req.user.id }).lean();
 
     if (!trip) {
       return res.status(404).json({ message: 'Trip not found' });
