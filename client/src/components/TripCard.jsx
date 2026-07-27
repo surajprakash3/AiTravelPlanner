@@ -11,11 +11,11 @@ const BUDGET_COLORS = {
 };
 
 const IMAGES = [
-  'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80',
-  'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80',
-  'https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&q=80',
-  'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80',
-  'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80',
+  'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&auto=format,compress&q=80',
+  'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&auto=format,compress&q=80',
+  'https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&auto=format,compress&q=80',
+  'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&auto=format,compress&q=80',
+  'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&auto=format,compress&q=80',
 ];
 
 const TripCard = memo(function TripCard({ trip }) {
